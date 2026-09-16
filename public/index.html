@@ -48,7 +48,7 @@
     class="relative z-10 flex flex-col items-center min-h-screen px-4 py-16 md:px-8 lg:px-12"
    >
     <h1
-     class="font-inter text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#002735] max-w-4xl leading-tight"
+     class="font-inter text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#002735] max-w-4xl leading-none"
      style="text-shadow: 0 1px 4px rgba(235, 245, 248, 0.6)"
     >
      8th Research, Statistic, and Innovation Forum
@@ -400,9 +400,9 @@
        <div class="space-y-3">
         <button
          id="registerBtn"
-         class="w-full bg-[#00adec] text-[#002735] font-inter font-medium text-sm tracking-wide py-3 px-4 border border-[#00adec] hover:bg-[#005b7b] hover:text-[#ebf5f8] hover:border-[#005b7b] transition-colors duration-200 uppercase cursor-pointer"
+         class="w-full bg-[#00adec] text-[#002735] font-inter font-medium text-sm tracking-wide py-3 px-4 border border-[#00adec] hover:bg-[#005b7b] hover:text-[#ebf5f8] hover:border-[#00adec] transition-colors duration-200 uppercase cursor-pointer"
         >
-         Register
+         Register Now
         </button>
         <p class="font-inter text-[11px] text-[#7c868a] text-center">
          free admission, no account required
@@ -428,52 +428,13 @@
     </div>
 
     <div
-     class="font-inter mt-12 text-[10px] tracking-widest text-[#002735]/60 uppercase"
+     class="font-inter mt-12 text-[10px] tracking-widest text-[#99E4FF]/60 uppercase"
     >
      DOST – 8th RSI Forum
     </div>
    </div>
   </div>
 
-  <script>
-   (function () {
-    const registerBtn = document.getElementById("registerBtn");
-    const calendarBtn = document.getElementById("calendarBtn");
-    const shareBtn = document.getElementById("shareBtn");
-
-    if (registerBtn) {
-     registerBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      alert("Registration opened — free admission, no account required.");
-     });
-    }
-
-    if (calendarBtn) {
-     calendarBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      alert(
-       "Event added to your calendar: Oct 12–14, 2026 (Quezon Convention Center)",
-      );
-     });
-    }
-
-    if (shareBtn) {
-     shareBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      if (navigator.share) {
-       navigator
-        .share({
-         title: "8th Research, Statistic, and Innovation Forum",
-         text: "Oct 12–14, 2026 · Quezon Convention Center, Lucena City",
-         url: window.location.href,
-        })
-        .catch(() => {});
-      } else {
-       alert("Share link: " + window.location.href);
-      }
-     });
-    }
-   })();
-  </script>
+  <script src="/src/js/main.js"></script>
  </body>
 </html>

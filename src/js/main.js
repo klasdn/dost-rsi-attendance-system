@@ -1,20 +1,38 @@
-document.addEventListener("DOMContentLoaded", () => {
- const slides = document.querySelectorAll(".slide");
- let currentSlide = 0;
- const slideInterval = 5000; // Change image every 5 seconds
+(function () {
+ const registerBtn = document.getElementById("registerBtn");
+ const calendarBtn = document.getElementById("calendarBtn");
+ const shareBtn = document.getElementById("shareBtn");
 
- function nextSlide() {
-  // Hide current slide
-  slides[currentSlide].classList.remove("opacity-100");
-  slides[currentSlide].classList.add("opacity-0");
-
-  // Advance index
-  currentSlide = (currentSlide + 1) % slides.length;
-
-  // Show next slide
-  slides[currentSlide].classList.remove("opacity-0");
-  slides[currentSlide].classList.add("opacity-100");
+ if (registerBtn) {
+  registerBtn.addEventListener("click", function (e) {
+   e.preventDefault();
+   window.location.href = "register.html";
+  });
  }
 
- setInterval(nextSlide, slideInterval);
-});
+ if (calendarBtn) {
+  calendarBtn.addEventListener("click", function (e) {
+   e.preventDefault();
+   alert(
+    "Event added to your calendar: Oct 12–14, 2026 (Quezon Convention Center)",
+   );
+  });
+ }
+
+ if (shareBtn) {
+  shareBtn.addEventListener("click", function (e) {
+   e.preventDefault();
+   if (navigator.share) {
+    navigator
+     .share({
+      title: "8th Research, Statistic, and Innovation Forum",
+      text: "Oct 12–14, 2026 · Quezon Convention Center, Lucena City",
+      url: window.location.href,
+     })
+     .catch(() => {});
+   } else {
+    alert("Share link: " + window.location.href);
+   }
+  });
+ }
+})();
