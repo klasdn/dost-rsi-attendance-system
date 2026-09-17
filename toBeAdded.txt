@@ -1,0 +1,4 @@
+Need ko definition ng "Classification"
+Need ko definition ng "Region", region as in region 1 2 3 or province. Katamad itype lahat
+
+In views, the email is defaulted to my email for debugging
