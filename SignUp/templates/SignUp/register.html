@@ -40,7 +40,7 @@
    <div
     class="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 py-4"
    >
-    <a href="./index.html" class="flex items-center gap-2 text-[#002735]">
+    <a href="/home" class="flex items-center gap-2 text-[#002735]">
      <svg
       class="w-6 h-6"
       viewBox="0 0 24 24"
@@ -59,10 +59,10 @@
     <nav
      class="flex items-center gap-6 text-xs uppercase tracking-widest text-[#35393a]"
     >
-     <a href="./index.html" class="hover:text-[#00adec] transition-colors"
+     <a href="/home" class="hover:text-[#00adec] transition-colors"
       >Home</a
      >
-     <a href="#" class="text-[#00adec]" aria-current="page">Register</a>
+     <a href="/register" class="text-[#00adec]" aria-current="page">Register</a>
     </nav>
    </div>
   </header>
@@ -92,7 +92,7 @@
      </p>
      <h1
       id="page-heading"
-      class="font-inter text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-[#ebf5f8] leading-[1.05]"
+      class="font-inter text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-[#ebf5f8] leading-[1.05]"
      >
       8th Research,<br />
       Statistic, and<br />
@@ -193,8 +193,6 @@
     id="registrationForm"
     novalidate
     class="max-w-7xl mx-auto px-4 md:px-8 py-16"
-    method="POST" 
-    enctype="multipart/form-data"
    >
     {% csrf_token %}
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -1015,7 +1013,6 @@
       <button
        type="button"
        id="confirmSignature"
-       name="signature_data"
        class="flex-1 bg-[#00adec] text-[#002735] font-inter font-medium text-[10px] tracking-[0.25em] uppercase py-3 px-4 border border-[#00adec] hover:bg-[#005b7b] hover:text-[#ebf5f8] hover:border-[#005b7b] focus:outline-none focus:ring-2 focus:ring-[#00adec] focus:ring-offset-2 transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-[#00adec] disabled:hover:text-[#002735] disabled:hover:border-[#00adec]"
        disabled
       >
@@ -1025,7 +1022,6 @@
     </div>
    </div>
   </div>
-
   <script src="{% static 'js/register.js' %}"></script>
   <!-- <script src="/src/js/register.js"></script> -->
  </body>

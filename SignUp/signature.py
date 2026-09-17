@@ -8,7 +8,7 @@ def create_signature_image(signature_data):
     height = signature_data["height"]
     strokes = signature_data["strokes"]
 
-    image = Image.new("RGBA", (width, height), "white")
+    image = Image.new("RGBA", (width, height), (0,0,0,0))
     draw = ImageDraw.Draw(image)
 
     for stroke in strokes:

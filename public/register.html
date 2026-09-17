@@ -1,10 +1,12 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Register — 8th Research, Statistics, and Innovation Forum</title>
-  <link rel="stylesheet" href="./css/output.css" />
+  <link rel="stylesheet" href="{% static 'css/output.css' %}">
+  <!-- <link rel="stylesheet" href="./css/output.css" /> -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -90,7 +92,7 @@
      </p>
      <h1
       id="page-heading"
-      class="font-inter text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-[#ebf5f8] leading-[1.05]"
+      class="font-inter text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-[#ebf5f8] leading-[1.05]"
      >
       8th Research,<br />
       Statistic, and<br />
@@ -191,7 +193,10 @@
     id="registrationForm"
     novalidate
     class="max-w-7xl mx-auto px-4 md:px-8 py-16"
+    method="POST" 
+    enctype="multipart/form-data"
    >
+    {% csrf_token %}
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
      <aside class="lg:col-span-4 lg:sticky lg:top-24 lg:self-start">
       <div class="border-l-2 border-[#00adec] pl-6">
@@ -1010,6 +1015,7 @@
       <button
        type="button"
        id="confirmSignature"
+       name="signature_data"
        class="flex-1 bg-[#00adec] text-[#002735] font-inter font-medium text-[10px] tracking-[0.25em] uppercase py-3 px-4 border border-[#00adec] hover:bg-[#005b7b] hover:text-[#ebf5f8] hover:border-[#005b7b] focus:outline-none focus:ring-2 focus:ring-[#00adec] focus:ring-offset-2 transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-[#00adec] disabled:hover:text-[#002735] disabled:hover:border-[#00adec]"
        disabled
       >
@@ -1020,6 +1026,7 @@
    </div>
   </div>
 
-  <script src="/src/js/register.js"></script>
+  <script src="{% static 'js/register.js' %}"></script>
+  <!-- <script src="/src/js/register.js"></script> -->
  </body>
 </html>

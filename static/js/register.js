@@ -230,6 +230,7 @@ confirmBtn.addEventListener("click", function () {
 
     const formData = new FormData(form);
 
+
 const signatureInfo = {
     width: canvas.clientWidth,
     height: canvas.clientHeight,
